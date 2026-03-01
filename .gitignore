@@ -1,0 +1,11 @@
+bin/
+obj/
+
+## Packages
+*.nupkg
+# Restore symbol files
+*.pdb
+
+## OS generated files
+.DS_Store
+Thumbs.db
