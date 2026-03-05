@@ -37,7 +37,7 @@ jobs:
           user: v1Y3D0CmAu
 
       - name: Push to NuGet
-        run: dotnet nuget push ./dist/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        run: dotnet nuget push ./dist/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --no-symbols --skip-duplicate
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
