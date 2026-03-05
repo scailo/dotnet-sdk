@@ -13,7 +13,7 @@
     <Description>Official C# SDK for accessing the Scailo API. Supports high-performance gRPC communication.</Description>
     <PackageTags>scailo;api;sdk;grpc;protobuf</PackageTags>
 
-    <PackageLicenseExpression>Apache 2.0</PackageLicenseExpression>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://scailo.com</PackageProjectUrl>
     <RepositoryUrl>https://github.com/scailo/dotnet-sdk</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
