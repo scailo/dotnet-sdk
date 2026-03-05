@@ -34,10 +34,11 @@ jobs:
         uses: NuGet/login@v1
         with:
           # Your NuGet.org username (not your email)
-          user: v1Y3D0CmAu
+          # user: v1Y3D0CmAu
+          user: Scailo
 
       - name: Push to NuGet
-        run: dotnet nuget push ./dist/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./dist/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
