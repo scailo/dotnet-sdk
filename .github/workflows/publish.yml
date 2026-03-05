@@ -23,7 +23,7 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Restore Dependencies
-        run: dotnet restore
+        run: dotnet restore Scailo.Sdk.csproj
 
       - name: Build and Pack
         # This creates the .nupkg file using the tag version
