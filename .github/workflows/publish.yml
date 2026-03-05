@@ -1,0 +1,48 @@
+name: Publish SDK to NuGet and GitHub
+
+on:
+  push:
+    tags:
+      - 'v*' # Triggers only on tags starting with 'v' (e.g., v1.0.0)
+
+# Added permissions for GitHub Release creation
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build and Pack
+        # This creates the .nupkg file using the tag version
+        run: dotnet pack -c Release -p:EmbedSource=true -p:PackageVersion=${GITHUB_REF_NAME#v} Scailo.Sdk.csproj --output ./dist
+
+      - name: NuGet Login (OIDC)
+        uses: NuGet/login@v1
+        with:
+          # Your NuGet.org username (not your email)
+          user: v1Y3D0CmAu
+
+      - name: Push to NuGet
+        run: dotnet nuget push ./dist/*.nupkg --source https://api.nuget.org/v3/index.json
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ github.ref_name }}
+          generate_release_notes: true # Automatically list your commits/PRs
+          files: |
+            ./dist/*.nupkg
+            ./dist/*.snupkg

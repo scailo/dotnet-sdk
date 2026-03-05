@@ -1,15 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <Version>1.0.0</Version>
+    <PackageId>Scailo.Sdk</PackageId>
+    <Version>0.1.0</Version>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Scailo</Authors>
-    <Description>C# SDK for accessing the Scailo API.</Description>
+    <Company>Unaxiom Technologies Pvt Ltd</Company>
+    <Product>Scailo C# SDK</Product>
+    <Description>Official C# SDK for accessing the Scailo API. Supports high-performance gRPC communication.</Description>
+    <PackageTags>scailo;api;sdk;grpc;protobuf</PackageTags>
+
+    <PackageLicenseExpression>Apache 2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://scailo.com</PackageProjectUrl>
     <RepositoryUrl>https://github.com/scailo/dotnet-sdk</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
 
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -21,13 +31,15 @@
     <DebugType>embedded</DebugType>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>$(NoWarn);1591</NoWarn>
 
     <AssemblyName>Scailo.Sdk</AssemblyName>
     <RootNamespace>Scailo.Sdk</RootNamespace>
+    <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
     <PackageReference Include="Google.Protobuf" Version="3.34.0" />
     <PackageReference Include="Grpc.Net.Client" Version="2.76.0" />
     <PackageReference Include="Grpc.Tools" Version="2.78.0">

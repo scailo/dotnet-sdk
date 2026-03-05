@@ -1,5 +1,6 @@
 bin/
 obj/
+gen/Google
 
 ## Packages
 *.nupkg
