@@ -83,16 +83,17 @@ var headers = new Metadata
 // Execute the request with headers
 var filterRequest = new PurchasesOrdersServiceFilterReq
 {
-    IsActive = BoolFilter.True,
+    IsActive = BOOL_FILTER.True,
     Count = 1,
-    SortOrder = SortOrder.Descending
+    SortOrder = SORT_ORDER.Descending
 };
 
 var response = await purchaseClient.FilterAsync(filterRequest, headers);
+Console.WriteLine($"Found {response.List.Count} orders.");
 
 foreach (var order in response.List)
 {
-    Console.WriteLine($"Order ID: {order.Id}");
+    Console.WriteLine($"Order ID: {order.Metadata.Id}");
 }
 ```
 
