@@ -68,7 +68,7 @@ namespace Scailo.Sdk {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Scailo.Sdk.UpdateOwnPasswordReq> __Marshaller_Scailo_UpdateOwnPasswordReq = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Scailo.Sdk.UpdateOwnPasswordReq.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Scailo.Sdk.SimpleSearchReq> __Marshaller_Scailo_SimpleSearchReq = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Scailo.Sdk.SimpleSearchReq.Parser));
+    static readonly grpc::Marshaller<global::Scailo.Sdk.UsersServicePasswordResetReq> __Marshaller_Scailo_UsersServicePasswordResetReq = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Scailo.Sdk.UsersServicePasswordResetReq.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Scailo.Sdk.UploadPictureReq> __Marshaller_Scailo_UploadPictureReq = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Scailo.Sdk.UploadPictureReq.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -81,6 +81,8 @@ namespace Scailo.Sdk {
     static readonly grpc::Marshaller<global::Scailo.Sdk.User> __Marshaller_Scailo_User = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Scailo.Sdk.User.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Scailo.Sdk.Identifier> __Marshaller_Scailo_Identifier = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Scailo.Sdk.Identifier.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Scailo.Sdk.SimpleSearchReq> __Marshaller_Scailo_SimpleSearchReq = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Scailo.Sdk.SimpleSearchReq.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Scailo.Sdk.ActiveStatus> __Marshaller_Scailo_ActiveStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Scailo.Sdk.ActiveStatus.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -245,11 +247,11 @@ namespace Scailo.Sdk {
         __Marshaller_Scailo_IdentifierResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Scailo.Sdk.SimpleSearchReq, global::Scailo.Sdk.MagicLink> __Method_RequestPasswordResetEmail = new grpc::Method<global::Scailo.Sdk.SimpleSearchReq, global::Scailo.Sdk.MagicLink>(
+    static readonly grpc::Method<global::Scailo.Sdk.UsersServicePasswordResetReq, global::Scailo.Sdk.MagicLink> __Method_RequestPasswordResetEmail = new grpc::Method<global::Scailo.Sdk.UsersServicePasswordResetReq, global::Scailo.Sdk.MagicLink>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RequestPasswordResetEmail",
-        __Marshaller_Scailo_SimpleSearchReq,
+        __Marshaller_Scailo_UsersServicePasswordResetReq,
         __Marshaller_Scailo_MagicLink);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -717,7 +719,7 @@ namespace Scailo.Sdk {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Scailo.Sdk.MagicLink> RequestPasswordResetEmail(global::Scailo.Sdk.SimpleSearchReq request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Scailo.Sdk.MagicLink> RequestPasswordResetEmail(global::Scailo.Sdk.UsersServicePasswordResetReq request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1913,7 +1915,7 @@ namespace Scailo.Sdk {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Scailo.Sdk.MagicLink RequestPasswordResetEmail(global::Scailo.Sdk.SimpleSearchReq request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Scailo.Sdk.MagicLink RequestPasswordResetEmail(global::Scailo.Sdk.UsersServicePasswordResetReq request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RequestPasswordResetEmail(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1924,7 +1926,7 @@ namespace Scailo.Sdk {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Scailo.Sdk.MagicLink RequestPasswordResetEmail(global::Scailo.Sdk.SimpleSearchReq request, grpc::CallOptions options)
+      public virtual global::Scailo.Sdk.MagicLink RequestPasswordResetEmail(global::Scailo.Sdk.UsersServicePasswordResetReq request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RequestPasswordResetEmail, null, options, request);
       }
@@ -1937,7 +1939,7 @@ namespace Scailo.Sdk {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Scailo.Sdk.MagicLink> RequestPasswordResetEmailAsync(global::Scailo.Sdk.SimpleSearchReq request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Scailo.Sdk.MagicLink> RequestPasswordResetEmailAsync(global::Scailo.Sdk.UsersServicePasswordResetReq request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RequestPasswordResetEmailAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1948,7 +1950,7 @@ namespace Scailo.Sdk {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Scailo.Sdk.MagicLink> RequestPasswordResetEmailAsync(global::Scailo.Sdk.SimpleSearchReq request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Scailo.Sdk.MagicLink> RequestPasswordResetEmailAsync(global::Scailo.Sdk.UsersServicePasswordResetReq request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RequestPasswordResetEmail, null, options, request);
       }
@@ -3580,7 +3582,7 @@ namespace Scailo.Sdk {
       serviceBinder.AddMethod(__Method_CreateMagicLinkForSignature, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Scailo.Sdk.MagicLinksServiceCreateRequestForSpecificResource, global::Scailo.Sdk.MagicLink>(serviceImpl.CreateMagicLinkForSignature));
       serviceBinder.AddMethod(__Method_UpdatePassword, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Scailo.Sdk.UpdatePasswordReq, global::Scailo.Sdk.IdentifierResponse>(serviceImpl.UpdatePassword));
       serviceBinder.AddMethod(__Method_UpdateOwnPassword, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Scailo.Sdk.UpdateOwnPasswordReq, global::Scailo.Sdk.IdentifierResponse>(serviceImpl.UpdateOwnPassword));
-      serviceBinder.AddMethod(__Method_RequestPasswordResetEmail, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Scailo.Sdk.SimpleSearchReq, global::Scailo.Sdk.MagicLink>(serviceImpl.RequestPasswordResetEmail));
+      serviceBinder.AddMethod(__Method_RequestPasswordResetEmail, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Scailo.Sdk.UsersServicePasswordResetReq, global::Scailo.Sdk.MagicLink>(serviceImpl.RequestPasswordResetEmail));
       serviceBinder.AddMethod(__Method_UpdateProfilePicture, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Scailo.Sdk.UploadPictureReq, global::Scailo.Sdk.IdentifierResponse>(serviceImpl.UpdateProfilePicture));
       serviceBinder.AddMethod(__Method_UpdateSignature, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Scailo.Sdk.UploadPictureReq, global::Scailo.Sdk.IdentifierResponse>(serviceImpl.UpdateSignature));
       serviceBinder.AddMethod(__Method_MFAEnable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Scailo.Sdk.IdentifierUUID, global::Scailo.Sdk.ImageResponse>(serviceImpl.MFAEnable));
